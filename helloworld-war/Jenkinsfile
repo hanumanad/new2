@@ -3,7 +3,7 @@ pipeline {
 stages {
 stage ('Compiler Stage') {
 steps {
-  withAnt(ant : stage('apache-ant-1.10.3') {
+  withAnt(ant : 'apache-ant-1.10.3') {
      sh 'ant war'
 }
 }
