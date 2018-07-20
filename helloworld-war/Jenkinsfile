@@ -1,22 +1,21 @@
 pipeline {
-  agent any
-stages {
-stage ('Compiler Stage') {
-steps {
-  withAnt(ant : 'apache-ant-1.10.3') {
-     sh 'ant war'
-}
-}
-}
-stage('Test') {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building..'
+            }
+        }
+        stage('Test') {
             steps {
                 echo 'Testing..'
             }
         }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
+    }
 }
-}
-            
-              
- 
-
-
