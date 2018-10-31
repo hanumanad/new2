@@ -1,6 +1,9 @@
 pipeline {
-    agent any
-
+    agent {
+        node {
+            label 'master'
+        }
+    }
     stages {
         stage('Compile Stage') {
             steps {
@@ -14,6 +17,6 @@ pipeline {
                 echo 'Testing..'
             }
         }
-    }
-}
-
+	}
+	}
+    
