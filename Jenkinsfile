@@ -8,7 +8,7 @@ pipeline {
         stage('Compile Stage') {
             steps {
            withAnt(installation: 'apache-ant-1.10.3') {
-            bat 'ant war'
+            sh 'ant war'
                    }
              }
   }
