@@ -4,7 +4,7 @@ node{
 	}
 	stage('Compile-Package'){
 	def antHome = tool name: 'apache-ant-1.10.3', type: 'ant'
-        sh "${antHome}/bin/ant war"
+        bat "${antHome}/bin/ant war"
         }
 }
     
