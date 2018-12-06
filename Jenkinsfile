@@ -7,4 +7,7 @@ node{
         sh "${antHome}/bin/ant war"
         }
 }
-    
+   node {
+            label 'liniux1'
+        sh 'cd /opt'
+        } 
