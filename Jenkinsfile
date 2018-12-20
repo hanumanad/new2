@@ -7,4 +7,3 @@ node{
         sh "${antHome}/bin/ant war"
         }
 }
-   
